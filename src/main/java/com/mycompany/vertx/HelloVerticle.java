@@ -6,38 +6,18 @@
 package com.mycompany.vertx;
 
 import io.vertx.core.AbstractVerticle;
-import io.vertx.core.Future;
-import io.vertx.core.logging.Logger;
 
 public class HelloVerticle extends AbstractVerticle {
-
-    
-    private static final Logger LOGGER = null;
-
-    // @Override
-    // public void start(Future<Void> future) {
-        // vertx.createHttpServer()
-        //   .requestHandler(r -> r.response().end("Welcome to Vert.x Intro");
-        //   }).listen(9090), 
-        //     result -> {
-        //       if (result.succeeded()) {
-        //           future.complete();
-        //       } else {
-        //           future.fail(result.cause());
-        //       }
-        //   });
-        
-    // }
 
 
     @Override
     public void stop() {
-        System.out.println("Shutting down application");
+        System.out.println("Shutting down HelloVerticle");
     }
 
     @Override
     public void start() throws Exception {
-        // TODO Auto-generated method stub
+        System.out.println("Starting HelloVerticle");
         super.start();
     }
 

@@ -12,6 +12,12 @@ public class Test extends AbstractVerticle {
     public static void main(String[] args) {
         Vertx vertx = Vertx.vertx();
         vertx.deployVerticle(new HelloVerticle());
+
+        System.out.println("start timer for 2 sec");
+        vertx.setTimer(2000, handler -> {
+            System.out.println("timer over, close vertx");
+            vertx.close().onComplete(handler2 -> System.out.println("vertx closed!"));
+        });
     }
 
 }
