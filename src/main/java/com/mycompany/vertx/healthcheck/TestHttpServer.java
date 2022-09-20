@@ -5,13 +5,17 @@
  */
 package com.mycompany.vertx.healthcheck;
 
+import io.vertx.core.AbstractVerticle;
 import io.vertx.core.Vertx;
 import io.vertx.ext.healthchecks.HealthCheckHandler;
-import io.vertx.ext.healthchecks.HealthChecks;
 import io.vertx.ext.healthchecks.Status;
 import io.vertx.ext.web.Router;
-import io.vertx.core.AbstractVerticle;
 
+/**
+ * start main
+ * http://localhost:8080/health : {"status":"UP","checks":[{"id":"my-procedure-name","status":"UP"}],"outcome":"UP"}
+ * sample from vertx doc
+ */
 public class TestHttpServer extends AbstractVerticle {
 
   public static void main(String[] args) {

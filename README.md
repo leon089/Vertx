@@ -7,3 +7,9 @@ repository git@github.com:leon089/Vertx.git
 SSH : pw wie bahn
 
 
+see commons ConfigService
+https://vertx.io/docs/vertx-web-api-service/java/
+
+
+
+➜  Vertx git:(main) ✗ mvn clean install
